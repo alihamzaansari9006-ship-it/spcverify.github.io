@@ -1,10 +1,239 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRIME VAULT💫 — Sign Up</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is my first web page. Created by Ali Hamza.</p>
+  <header class="top-bar">
+    <div class="brand">
+      <div class="logo logo-slot" id="topLogo">Logo</div>
+      <div>
+        <p class="brand-name">PRIME VAULT💫</p>
+        <p class="brand-tagline">Secure portal for PM + PMM collaboration</p>
+      </div>
+    </div>
+    <nav>
+      <a class="link" href="#signup">Sign Up</a>
+      <a class="link" href="#login">Login</a>
+      <a class="link" href="#terms">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to PRIME VAULT💫</h1>
+        <p>Join a trusted network where PMMs list Amazon products and PMs submit reviews safely across multiple countries.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#signup">Create Account</a>
+          <a class="button ghost" href="#login">I already have an account</a>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Fast Approvals</h3>
+            <p>Admins review applications quickly and notify members by email.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Transparent Orders</h3>
+            <p>Track orders, reviews, refunds, and commission totals in one dashboard.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Secure Profiles</h3>
+            <p>Profile updates are protected with admin approval workflow.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-logo logo-slot" id="heroLogo">Logo</div>
+        <h2>Sign Up</h2>
+        <p class="helper">Already have an account? <a href="#login">Login</a></p>
+        <label class="upload-logo">
+          <input id="logoUpload" type="file" accept="image/*">
+          Update portal logo
+        </label>
+        <div class="portal-notes">
+          <p contenteditable="true">Add your portal description here.</p>
+          <p contenteditable="true">Highlight benefits and guidelines for PM &amp; PMM members.</p>
+          <p contenteditable="true">Share important notes or announcements.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="signup" class="section">
+      <h2>Complete Your Registration</h2>
+      <form class="form" id="signupForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" type="text" placeholder="Enter first name" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="lastName" type="text" placeholder="Enter last name" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of birth</label>
+            <input id="dob" name="dob" type="date" required>
+            <small class="error" id="ageError">You must be 18+ to register.</small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone number (WhatsApp)</label>
+            <input id="phone" name="phone" type="tel" placeholder="+92 300 0000000" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="name@email.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Create password" required>
+            <div class="strength">
+              <span class="strength-bar" id="strengthBar"></span>
+            </div>
+            <small class="helper">Use numbers, symbols, and uppercase letters.</small>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Re-password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm password" required>
+            <small class="error" id="passwordError">Passwords do not match.</small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cnic">CNIC number</label>
+            <input id="cnic" name="cnic" type="text" placeholder="00000-0000000-0" required>
+          </div>
+          <div class="form-group">
+            <label for="cnicFront">CNIC picture</label>
+            <input id="cnicFront" name="cnicFront" type="file" accept="image/*" required>
+          </div>
+          <div class="form-group">
+            <label for="cnicBack">CNIC back picture</label>
+            <input id="cnicBack" name="cnicBack" type="file" accept="image/*" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="Pakistan" required>
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" placeholder="Lahore" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Full address</label>
+          <textarea id="address" name="address" rows="2" placeholder="Street, area, city" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bankName">Bank name (JazzCash / Easypaisa / Bank)</label>
+            <input id="bankName" name="bankName" type="text" placeholder="Bank name" required>
+          </div>
+          <div class="form-group">
+            <label for="bankHolder">Bank holder name</label>
+            <input id="bankHolder" name="bankHolder" type="text" placeholder="Account holder" required>
+          </div>
+          <div class="form-group">
+            <label for="bankNumber">Bank number</label>
+            <input id="bankNumber" name="bankNumber" type="text" placeholder="Account number" required>
+          </div>
+        </div>
+
+        <label class="checkbox">
+          <input id="termsCheck" type="checkbox" required>
+          I agree with all <a href="#terms">Terms</a> and <a href="#privacy">Privacy Policy</a>.
+        </label>
+
+        <button class="button primary" type="submit">Submit Application</button>
+        <p class="form-message" id="formMessage"></p>
+      </form>
+    </section>
+
+    <section id="verification" class="section hidden">
+      <h2>Email Verification</h2>
+      <p>Enter the 6-digit code sent to your email to complete registration.</p>
+      <form class="form" id="verifyForm">
+        <div class="form-group">
+          <label for="verificationCode">Verification code</label>
+          <input id="verificationCode" name="verificationCode" type="text" maxlength="6" placeholder="123456" required>
+        </div>
+        <button class="button primary" type="submit">Verify</button>
+        <p class="form-message" id="verifyMessage"></p>
+      </form>
+    </section>
+
+    <section id="login" class="section">
+      <h2>Login</h2>
+      <p class="helper">Login requires admin approval. Pending, rejected, and approved states will be shown here.</p>
+      <form class="form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" name="loginEmail" type="email" placeholder="name@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" name="loginPassword" type="password" placeholder="Password" required>
+          </div>
+        </div>
+        <button class="button primary" type="button">Login</button>
+        <div class="status-grid">
+          <p class="status pending">Pending approval</p>
+          <p class="status approved">Approved</p>
+          <p class="status rejected">Rejected</p>
+          <p class="status warning">Email not registered</p>
+        </div>
+      </form>
+    </section>
+
+    <section id="terms" class="section">
+      <h2>Terms &amp; Privacy Policy</h2>
+      <div class="policy">
+        <p contenteditable="true">Write your Terms here. You can update this content any time.</p>
+        <p contenteditable="true">Add Privacy Policy details. Explain how you protect member data.</p>
+      </div>
+    </section>
+
+    <section id="privacy" class="section">
+      <h2>Privacy Policy</h2>
+      <div class="policy">
+        <p contenteditable="true">Use this section for detailed privacy policy updates.</p>
+        <p contenteditable="true">Explain how member data is stored, shared, and protected.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>PRIME VAULT💫 © 2024. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
